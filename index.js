@@ -9,11 +9,7 @@ const app = express();
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
- 
-// mongoose.connect("mongodb+srv://jitendraPatel:8teXAne2Ql9IhXs6@cluster0.j4wsmav.mongodb.net/user_project")
-//     .then(() => console.log('mongodb is connected'))
-//     .catch(() => console.log('mongodb is not connected'));
+app.use(bodyParser.urlencoded({ extended: true })); 
 mongoose.connect(process.env.DATABASE_URL)
     .then(() => console.log('mongodb is connected'))
     .catch(() => console.log('mongodb is not connected'));
